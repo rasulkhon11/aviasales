@@ -1,0 +1,7 @@
+<div class="block">
+  <div class="title">Количество пересадок</div>
+  <div class="group" *ngFor="let category of categories">
+    <input type="checkbox" class="input" [checked]="category.checked" (change)="check($event, category.id)">
+    <label>{{category.name}}</label>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.block {
+  width: 232px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+
+  .title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #4A4A4A;
+  }
+  .group {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color: #4A4A4A;
+    font-size: 13px;
+    line-height: 20px;
+    .input {
+      margin: 0 10px 0 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

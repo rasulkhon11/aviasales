@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo {
+    margin: 50px 0;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+
+    app-category {
+      margin-right: 20px;
+    }
+
+    .content {
+      .tabs {
+        display: flex;
+        .tab {
+          width: 251px;
+          padding: 15px 0;
+          text-align: center;
+          background: #FFFFFF;
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+
+          &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          &.active {
+            background: #2196F3;
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      app-list-item {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+

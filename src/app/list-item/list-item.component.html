@@ -1,0 +1,22 @@
+<div class="group">
+  <div class="header">
+    <span class="price">{{ticket.price}}</span>
+    <img width="110px" src="http://pics.avs.io/99/36/S7@2x.png">
+  </div>
+  <div class="content">
+    <div class="content-group" *ngFor="let segment of ticket.segments">
+      <div class="first-block">
+        <span class="title">{{segment.origin + ' - ' + segment.destination}}</span>
+        <span class="text">{{segment.date | timeRange : segment.duration}}</span>
+      </div>
+      <div class="second-block">
+        <span class="title">В пути</span>
+        <span class="text">{{segment.duration | time}}</span>
+      </div>
+      <div class="third-block">
+        <span class="title">{{segment.stops.length | transfer}}</span>
+        <span class="text">{{segment.stops.join(', ')}}</span>
+      </div>
+    </div>
+  </div>
+</div>

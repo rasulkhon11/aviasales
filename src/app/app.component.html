@@ -1,0 +1,13 @@
+<div class="logo">
+  <img src="../assets/images/Logo.svg">
+</div>
+<div class="main">
+  <app-category (checked)="onChecked($event)"></app-category>
+  <div class="content">
+    <div class="tabs">
+      <div class="tab" [class.active]="isCheapActive" (click)="getFilteredTickets(true)">Самый дешевый</div>
+      <div class="tab" [class.active]="!isCheapActive" (click)="getFilteredTickets(false)">Самый быстрый</div>
+    </div>
+    <app-list-item *ngFor="let ticket of filteredTickets" [ticket]="ticket"></app-list-item>
+  </div>
+</div>
